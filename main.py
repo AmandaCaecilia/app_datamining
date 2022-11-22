@@ -40,23 +40,21 @@ algoritma=st.sidebar.selectbox(
 data_hf = pd.read_csv("https://raw.githubusercontent.com/AmandaCaecilia/datamining/main/heart_failure_clinical_records_dataset.csv")
 st.write("Dataset Heart Failure : (https://raw.githubusercontent.com/AmandaCaecilia/datamining/main/heart_failure_clinical_records_dataset.csv) ", data_hf)
 
-st.write('Dataset Description')
-st.write("""
-            age: Age of the patient
-anaemia: Haemoglobin level of patient
-creatinine_phosphokinase: Level of the CPK enzyme in the blood (mcg/L)
-diabetes: If the patient has diabetes (Boolean)
-ejection_fraction: Percentage of blood leaving the heart at each contraction
-high_blood_pressure: If the patient has hypertension
-platelets: Platelet count of blood (kiloplatelets/mL)
-serum_creatinine: Level of serum creatinine in the blood (mg/dL)
-serum_sodium: Level of serum sodium in the blood (mEq/L)
-sex: Sex of the patient
-smoking: If the patient smokes or not
-time: Follow-up period
-DEATH_EVENT: If the patient deceased during the follow-up period"""
-            )
-
+st.write('Dataset Description :')
+st.write('1. age: Age of the patient')
+st.write('2. anemia: Haemoglobin level of patient')
+st.write('3. creatinine_phosphokinase: Level of the CPK enzyme in the blood (mcg/L)')
+st.write('4. diabetes: If the patient has diabetes (Boolean)')
+st.write('5. ejection_fraction: Percentage of blood leaving the heart at each contraction')
+st.write('6. high_blood_pressure: If the patient has hypertension(Boolean)')
+st.write('7. platelets: Platelet count of blood (kiloplatelets/mL)')
+st.write('8. serum_creatinine: Level of serum creatinine in the blood (mg/dL)')
+st.write('9. serum_sodium: Level of serum sodium in the blood (mEq/L)')
+st.write('10. sex: Sex of the patient(Boolean)')
+st.write('11. smoking: If the patient smokes or not(Boolean)')
+st.write('12. time: Follow-up period')
+st.write('13. DEATH_EVENT: If the patient deceased during the follow-up period')
+ 
 st.write('Jumlah baris dan kolom :', data_hf.shape)
 
 X=data_hf.iloc[:,0:12].values 
