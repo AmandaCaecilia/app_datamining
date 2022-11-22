@@ -37,6 +37,7 @@ algoritma=st.sidebar.selectbox(
     'Pilih', ('Decision Tree','Random Forest','SVM')
 )
 
+st.write('## 2. About Dataset (Heart Failure)')
 data_hf = pd.read_csv("https://raw.githubusercontent.com/AmandaCaecilia/datamining/main/heart_failure_clinical_records_dataset.csv")
 st.write("Dataset Heart Failure : (https://raw.githubusercontent.com/AmandaCaecilia/datamining/main/heart_failure_clinical_records_dataset.csv) ", data_hf)
 
@@ -127,15 +128,11 @@ print('precision_SVM : %.3f' %precision)
 print('recall_SVM : %.3f' %recall)
 print('f1-score_SVM : %.3f' %f1)
 
-st.write("""
-            #### Akurasi:"""
-            )
+st.write('## 3. Akurasi Metode')
 
 results = pd.DataFrame({
     'Model': ['Decision Tree','Random Forest','SVM'],
-    'Score': [ acc_decision_tree,
-              acc_random_forest, acc_SVM ],
-    "Accuracy_score":[accuracy_dt,
+    'Accuracy_score':[accuracy_dt,
                       accuracy_rf,accuracy_SVM
                      ]})
 result_df = results.sort_values(by='Accuracy_score', ascending=False)
